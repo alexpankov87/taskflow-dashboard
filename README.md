@@ -37,20 +37,20 @@
 ## 📁 Структура проекта
 src/
 ├── components/
-│   ├── Dashboard/           # главный компонент
-│   ├── TaskBoard/           # доска с колонками
-│   ├── TaskColumn/           # колонка задач
-│   ├── TaskCard/             # карточка задачи
-│   ├── TaskModal/            # модалка создания/редактирования
-│   ├── FilteredTasksModal/   # модалка с отфильтрованными задачами
-│   ├── CompletedTasksChart/  # линейный график выполнения
-│   └── ...
+│ ├── Dashboard/ # главный компонент
+│ ├── TaskBoard/ # доска с колонками
+│ ├── TaskColumn/ # колонка задач
+│ ├── TaskCard/ # карточка задачи
+│ ├── TaskModal/ # модалка создания/редактирования
+│ ├── FilteredTasksModal/ # модалка с отфильтрованными задачами
+│ ├── CompletedTasksChart/ # линейный график выполнения
+│ └── ...
 ├── context/
-│   ├── TaskContext.tsx       # контекст задач (CRUD, localStorage)
-│   └── ThemeContext.tsx      # контекст темы (тёмная/светлая)
+│ ├── TaskContext.tsx # контекст задач (CRUD, localStorage)
+│ └── ThemeContext.tsx # контекст темы (тёмная/светлая)
 ├── types/
-│   └── index.ts              # TypeScript типы
-└── App.tsx 
+│ └── index.ts # TypeScript типы
+└── App.tsx
 ## 🔧 Установка и запуск
 1. Клонируй репозиторий:
    ```bash
