@@ -34,25 +34,19 @@
 - **Vite** — сборка
 - **LocalStorage** — хранение данных
 
-## 📁 Структура проекта
-src/
-├── components/
-│ ├── Dashboard/ # главный компонент
-│ ├── TaskBoard/ # доска с колонками
-│ ├── TaskColumn/ # колонка задач
-│ ├── TaskCard/ # карточка задачи
-│ ├── TaskModal/ # модалка создания/редактирования
-│ ├── FilteredTasksModal/ # модалка с отфильтрованными задачами
-│ ├── CompletedTasksChart/ # линейный график выполнения
-│ └── ...
-├── context/
-│ ├── TaskContext.tsx # контекст задач (CRUD, localStorage)
-│ └── ThemeContext.tsx # контекст темы (тёмная/светлая)
-├── types/
-│ └── index.ts # TypeScript типы
-└── App.tsx
 ## 🔧 Установка и запуск
+
 1. Клонируй репозиторий:
    ```bash
    git clone https://github.com/твой-логин/taskflow-dashboard.git
    cd taskflow-dashboard
+   
+Установи зависимости:
+npm install
+
+Запусти проект в режиме разработки:
+npm run dev
+Открой http://localhost:5173 в браузере.
+
+📦 Сборка для продакшена
+npm run build
