@@ -228,7 +228,7 @@ const Dashboard: React.FC = () => {
                         fill="#8884d8"
                         dataKey="value"
                       >
-                        {priorityData.map((entry, index) => (
+                        {priorityData.map((_, index) => (
                           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                       </Pie>
