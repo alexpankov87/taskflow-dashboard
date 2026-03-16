@@ -10,19 +10,19 @@
 ## 📸 Скриншоты
 
 ### Светлая тема
-![Дашборд (светлая)](screenshots/dashboard-light.png)
+![Дашборд (светлая)](src/screenshots/dashboard-light.png)
 *Главный экран с графиками и карточками статистики*
 
 ### Тёмная тема
-![Дашборд (тёмная)](screenshots/dashboard-dark.png)
+![Дашборд (тёмная)](src/screenshots/dashboard-dark.png)
 *Тёмная тема автоматически меняет цвета*
 
 ### Доска задач
-![Доска с колонками](screenshots/task-board.png)
+![Доска с колонками](src/screenshots/task-board.png)
 *Перетаскивание задач между статусами*
 
 ### Редактирование задачи
-![Модальное окно](screenshots/edit-modal.png)
+![Модальное окно](src/screenshots/edit-modal.png)
 *Редактирование или создание новой задачи*
 
 ## ✨ Возможности
