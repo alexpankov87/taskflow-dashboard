@@ -52,7 +52,7 @@
 
 1. Клонируй репозиторий:
    ```bash
-   git clone https://github.com/твой-логин/taskflow-dashboard.git
+   git clone https://github.com/alexpankov87/taskflow-dashboard.git
    cd taskflow-dashboard
    
 Установи зависимости:
