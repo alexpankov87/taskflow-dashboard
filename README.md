@@ -1,73 +1,52 @@
 # React + TypeScript + Vite
+# TaskFlow Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Интерактивный дашборд для управления задачами** — SPA на React + TypeScript с визуализацией статистики, Drag-n-Drop и тёмной темой. Проект демонстрирует навыки работы с состоянием, графиками, анимациями и адаптивной вёрсткой.
 
-Currently, two official plugins are available:
+## 🚀 Демо
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Ссылка на деплой (будет после Vercel)]
 
-## React Compiler
+## 📸 Скриншоты
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*(Добавь позже ссылки на скриншоты)*
 
-## Expanding the ESLint configuration
+## ✨ Возможности
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📊 **Дашборд** с карточками статистики (всего задач, выполнено, в работе, ожидают, просрочено)
+- 📈 **Два типа графиков**: круговая диаграмма по приоритетам, столбчатая по статусам
+- 📉 **Линейный график** выполнения задач за последние 7 дней
+- 🎯 **Drag-n-Drop**: перетаскивание задач между колонками (статусами)
+- ✏️ **CRUD операции**: создание, редактирование, удаление задач
+- 💾 **Сохранение данных** в localStorage
+- 🌓 **Тёмная/светлая тема** с сохранением выбора
+- 🎨 **Адаптивный дизайн** (mobile-first)
+- ⚡ **Анимации** с Framer Motion
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Стек технологий
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React** (функциональные компоненты, хуки)
+- **TypeScript** (типизация)
+- **Material-UI (MUI)** — компоненты и темизация
+- **Recharts** — графики
+- **@dnd-kit** — Drag-n-Drop
+- **Framer Motion** — анимации
+- **Vite** — сборка
+- **LocalStorage** — хранение данных
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔧 Установка и запуск
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Клонируй репозиторий:
+   ```bash
+   git clone https://github.com/твой-логин/taskflow-dashboard.git
+   cd taskflow-dashboard
+   
+Установи зависимости:
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Запусти проект в режиме разработки:
+npm run dev
+Открой http://localhost:5173 в браузере.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📦 Сборка для продакшена
+npm run build
