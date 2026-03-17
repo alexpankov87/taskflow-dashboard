@@ -37,7 +37,7 @@ const cardVariants = {
 };
 
 const Dashboard: React.FC = () => {
-  const { tasks, updateTask, addTask, deleteTask } = useTasks(); // добавили deleteTask
+  const { tasks, updateTask, addTask, deleteTask } = useTasks();
   const { mode, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -217,7 +217,8 @@ const Dashboard: React.FC = () => {
                 <Typography variant="h6" gutterBottom>Приоритеты задач</Typography>
                 <Box sx={{ flex: 1, minHeight: 0, position: 'relative' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
+                    {/* Ключ заставляет график перерисовываться при изменении данных */}
+                    <PieChart key={JSON.stringify(priorityData)}>
                       <Pie
                         data={priorityData}
                         cx="50%"
@@ -243,7 +244,8 @@ const Dashboard: React.FC = () => {
                 <Typography variant="h6" gutterBottom>Статус задач</Typography>
                 <Box sx={{ flex: 1, minHeight: 0, position: 'relative' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={statusData}>
+                    {/* Ключ заставляет график перерисовываться при изменении данных */}
+                    <BarChart key={JSON.stringify(statusData)} data={statusData}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="name" />
                       <YAxis />
@@ -279,7 +281,7 @@ const Dashboard: React.FC = () => {
         </Button>
       </Box>
 
-      {/* Доска с задачами — теперь передаём onEditTask и onDeleteTask */}
+      {/* Доска с задачами */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
